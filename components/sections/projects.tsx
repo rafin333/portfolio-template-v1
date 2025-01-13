@@ -12,11 +12,11 @@ import { MagicCard } from '../ui/magic-card';
 const projects = [
   {
     title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform built with Next.js and Stripe",
+    description: "A full-featured e-commerce platform built with React.js and Vite",
     image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    technologies: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    technologies: ["React.js", "TypeScript", "Vite", "Tailwind CSS"],
+    github: "https://github.com/rafin333/portfolio-project.git",
+    demo: "https://portfolio-project-rho-two.vercel.app/",
   },
   {
     title: "Task Management App",
