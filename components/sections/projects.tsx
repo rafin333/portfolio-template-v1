@@ -11,29 +11,53 @@ import { MagicCard } from '../ui/magic-card';
 
 const projects = [
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform built with React.js and Vite",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c",
-    technologies: ["React.js", "TypeScript", "Vite", "Tailwind CSS"],
-    github: "https://github.com/rafin333/portfolio-project.git",
-    demo: "https://portfolio-project-rho-two.vercel.app/",
+    title: "Arabic Learning Management System",
+    description: "Enhanced the user interface by refining UI components, adding profile management features, integrating PayPal for course subscriptions, and implementing a dynamic leaderboard system. Focused on delivering a smooth, responsive experience tailored for Arabic learners",
+    image: "/images/lms-user.png",
+    technologies: ["React.js", "Zustend", "Tailwind CSS", "REST APIs"],
+    github: "https://github.com/shraiyan47/Nakhlah-LanguageLearningApp",
+    demo: "https://nakhlah-language-learning-app.vercel.app/",
   },
   {
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates",
-    image: "https://images.unsplash.com/photo-1557804506-669a67965ba0",
-    technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-    github: "https://github.com",
-    demo: "https://demo.com",
+    title: "E-Commerce Storefront",
+    description: "Developed a fully responsive e-commerce site with dark/light mode, dynamic product display, cart management using local storage, and bKash Hosted Checkout integration for secure payments",
+    image: "/images/ecommerce-storefront.png",
+    technologies: ["React.js", "Next.js", "Tailwind CSS", "REST APIs"],
+    github: "https://github.com/rafin333/eommerce-storefront",
+    demo: "https://eommerce-storefront.vercel.app/",
   },
   {
-    title: "Learning Management System",
-    description: "A comprehensive LMS for course creation, tracking, and reporting",
-    image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d",  
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    github: "https://github.com",
-    demo: "https://demo.com",
-  }
+    title: "Islamic App",
+    description: "Developed a comprehensive Islamic web app featuring live prayer times, a Hijri calendar, Quran recitations, Hadith of the day, and essential Islamic tools like Qibla finder, Zakat calculator, and Tasbih counter. Integrated geolocation, dark mode, and multilingual UI with a seamless, mobile-responsive user experience",
+    image: "/images/islamic-app.png",
+    technologies: ["React.js", "Redux", "Tailwind CSS", "REST APIs"],
+    github: "https://github.com/shraiyan47/TrueLight/tree/rafinDev",
+    demo: "https://v0-true-ligth.vercel.app/",
+  },
+  {
+    title: "Real-Time Chat App",
+    description: "Built a real-time messaging app with user authentication, live message delivery, typing indicators, and message history. Focused on responsive UI, smooth UX, and WebSocket integration for instant communication.",
+    image: "/images/chat-app.jpg",
+    technologies: ["React.js", "Node.js", "Tailwind CSS", "Socket.IO"],
+    github: "https://github.com/rafin333",
+    demo: "https://v0-true-ligth.vercel.app/",
+  },
+  {
+    title: "Portfolio Website",
+    description: "Designed and developed a modern, responsive personal portfolio for a client, featuring animated sections, smooth navigation, dark/light mode, and optimized performance for a professional online presence.",
+    image: "/images/client-portfolio.png",
+    technologies: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion"],
+    github: "https://github.com/rafin333",
+    demo: "https://kzmgcl5zvvnlnme3oc47.lite.vusercontent.net/",
+  },
+  {
+    title: "LMS Admin Dashboard",
+    description: "Developed and optimized the admin dashboard with role-based access control (RBAC), rich text editors for managing policies and email templates, and full CRUD operations for FAQs and user feedback. Actively contributed to bug fixing and UI improvements to enhance admin workflows",
+    image: "/images/lms-admin.png",
+    technologies: ["React.js", "Redux", "Tailwind CSS", "REST APIs"],
+    github: "https://github.com/shraiyan47/NakhlahSaudi",
+    demo: "https://nakhlah-arabic.vercel.app/",
+  },
 ];
 
 export function Projects() {
@@ -60,39 +84,56 @@ export function Projects() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <MagicCard className="overflow-hidden flex flex-col items-center justify-between p-6">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform hover:scale-105"
-                    />
+
+                <MagicCard className="overflow-hidden flex flex-col p-6 h-full">
+                  {/* Top Content */}
+                  <div className="flex flex-col flex-grow">
+                    <div className="relative h-48 w-full">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover transition-transform hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center mt-4">
+                      <h3 className="text-xl font-semibold mb-2 text-center">
+                        {project.title}
+                      </h3>
+                      <p className="line-clamp-4 text-muted-foreground mb-4 text-justify">
+                        {project.description}
+                      </p>
+                      <div className="flex flex-wrap gap-2 mb-4 justify-center">
+                        {project.technologies.map((tech) => (
+                          <Badge key={tech} variant="secondary">
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center mt-4">
-                    <h3 className="text-xl font-semibold mb-2 text-center">{project.title}</h3>
-                    <p className="text-muted-foreground mb-4 text-center">{project.description}</p>
-                    <div className="flex flex-wrap gap-2 mb-4 justify-center">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary">
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                    <div className="flex gap-4 justify-center">
-                      <Button size="sm" variant="outline" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="mr-2 h-4 w-4" /> Code
-                        </a>
-                      </Button>
-                      <Button size="sm" asChild>
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" /> Demo
-                        </a>
-                      </Button>
-                    </div>
+                  {/* Buttons at the bottom */}
+                  <div className="flex gap-4 justify-center mt-4">
+                    <Button size="sm" variant="outline" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="mr-2 h-4 w-4" /> Code
+                      </a>
+                    </Button>
+                    <Button size="sm" asChild>
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" /> Demo
+                      </a>
+                    </Button>
                   </div>
                 </MagicCard>
+
+
+
+
+
+
+
+
               </motion.div>
             ))}
           </div>

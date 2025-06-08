@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';	
-const resumePath = '/resume.pdf';
+import { useInView } from 'react-intersection-observer';
 
+const resumePath = '/resume.pdf';
 
 export function About() {
   const [ref, inView] = useInView({
@@ -26,24 +26,15 @@ export function About() {
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <div className="prose dark:prose-invert mx-auto mb-8">
             <p className="text-lg mb-4">
-              A passionate web developer specializing in creating modern, user-friendly, and scalable applications with the MERN stack. My expertise lies in front-end technologies like React.js, Next.js, and Tailwind CSS, enabling me to craft seamless digital experiences that blend design and functionality.
+              By day, I&apos;m a Junior Software Engineer at Fintech Hub Ltd, building cool stuff with React, Next.js, and Tailwind CSS. From e-commerce sites to real-time chat apps and even an Islamic app packed with features, I&apos;ve had a blast crafting interfaces that feel good and work great.
             </p>
             <p className="text-lg mb-4">
-              Collaboration and problem-solving drive my approach to development. I thrive in team environments where innovative ideas come to life through collective effort. Outside of work, I enjoy keeping up with emerging technologies and experimenting with creative side projects to expand my knowledge and capabilities.
-            </p>
-            <p className="text-lg mb-4">
-              Let&apos;s create meaningful and impactful digital solutions together!
+              I&apos;m all about clean code, smooth UX, and learning something new every day. If it involves pixels, performance, or pushing the web forward, count me in.
             </p>
           </div>
-          
-          {/* <Button asChild>
-            <a href={resume} download>
-              <Download className="mr-2 h-4 w-4" /> Download Resume
-            </a>
-          </Button> */}
 
           <Button asChild>
-            <a href="https://gray-brett-38.tiiny.site/" download>
+            <a href={resumePath} download>
               <Download className="mr-2 h-4 w-4" /> Download Resume
             </a>
           </Button>
