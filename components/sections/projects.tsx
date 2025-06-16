@@ -23,8 +23,8 @@ const projects = [
     description: "Developed a fully responsive e-commerce site with dark/light mode, dynamic product display, cart management using local storage, and bKash Hosted Checkout integration for secure payments",
     image: "/images/ecommerce-storefront.png",
     technologies: ["React.js", "Next.js", "Tailwind CSS", "REST APIs"],
-    github: "https://github.com/rafin333/eommerce-storefront",
-    demo: "https://eommerce-storefront.vercel.app/",
+    github: "https://github.com/rafin333/ecommerce-site-frontend",
+    demo: "https://ecommerce-site-frontend-seven.vercel.app/",
   },
   {
     title: "Islamic App",
@@ -47,8 +47,8 @@ const projects = [
     description: "Designed and developed a modern, responsive personal portfolio for a client, featuring animated sections, smooth navigation, dark/light mode, and optimized performance for a professional online presence.",
     image: "/images/client-portfolio.png",
     technologies: ["React.js", "Next.js", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/rafin333",
-    demo: "https://kzmgcl5zvvnlnme3oc47.lite.vusercontent.net/",
+    github: "https://github.com/rafin333/client-portfolio",
+    demo: "https://salma-fariha-frontend-portfolio.vercel.app/",
   },
   {
     title: "LMS Admin Dashboard",
